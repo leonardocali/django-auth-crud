@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="text-center display-1">DJANGO APP</h1> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aliquam dolores praesentium molestias aperiam officiis. Sint nesciunt a, mollitia ea aut perferendis neque cupiditate veritatis, illum labore, quod explicabo consequuntur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aliquam dolores praesentium molestias aperiam officiis. Sint nesciunt a, mollitia ea aut perferendis neque cupiditate veritatis, illum labore, quod explicabo consequuntur.</p>
+        <div class="text-center">
+            {% if user.is_authenticated %}
+            {% else %}
+            <a class="btn btn-primary" type="button" href="{% url 'singup' %}">Singup</a> 
+            <a class="btn btn-danger" type="button" href="{% url 'login' %}">Login</a> 
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

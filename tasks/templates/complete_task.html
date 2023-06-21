@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Completed task</h1>
+{% for tarea in listask %}
+<ul class="list-group mb-2">
+    <li class="list-group-item" style="width: 50%; background-color: bisque; border: 2px black solid; ">{{ tarea }} - {{tarea.datecompleted|date:'M j y:i'}}</li>
+</ul>
+{% endfor %}
+{% endblock %} 
